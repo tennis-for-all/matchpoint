@@ -27,7 +27,7 @@
             margin: 0; padding: 0;
             box-sizing: border-box;
         }
-
+ 
         :root {
             --green: #84cc16;
             --green-dark: #65a30d;
@@ -40,7 +40,7 @@
             --muted: #64748b;
             --border: #e2e8f0;
         }
-
+ 
         body {
             font-family: 'Inter', 'Segoe UI', sans-serif;
             background: var(--bg);
@@ -48,42 +48,42 @@
             line-height: 1.6;
             font-size: 16px;
         }
-
+ 
         .container { width: 90%; max-width: 1080px; margin: 0 auto; }
-
+ 
         /* HEADER */
         header {
             background: var(--white);
             border-bottom: 1px solid var(--border);
             position: sticky; top: 0; z-index: 100;
         }
-
+ 
         .nav-container {
             display: flex; justify-content: space-between;
             align-items: center; height: 68px;
         }
-
+ 
         .logo {
             font-size: 1.15rem; font-weight: 700;
             color: var(--navy); letter-spacing: -0.01em;
         }
-
+ 
         .logo span { color: var(--orange); }
-
+ 
         .nav-links { list-style: none; display: flex; gap: 2rem; }
-
+ 
         .nav-links a {
             text-decoration: none; color: var(--muted);
             font-size: 0.875rem; font-weight: 500;
             transition: color 0.2s;
         }
-
+ 
         .nav-links a:hover { color: var(--navy); }
-
+ 
         /* PAGE TOGGLE */
         .page { display: none; }
         .page.active { display: block; }
-
+ 
         /* HERO */
         .hero {
             padding: 5.5rem 0 5rem;
@@ -91,27 +91,27 @@
             text-align: center;
             border-bottom: 1px solid var(--border);
         }
-
+ 
         .hero-eyebrow {
             display: inline-block;
             font-size: 0.75rem; font-weight: 600;
             letter-spacing: 0.12em; text-transform: uppercase;
             color: var(--orange); margin-bottom: 1.25rem;
         }
-
+ 
         .hero h1 {
             font-size: clamp(2.2rem, 5vw, 3.25rem);
             font-weight: 700; color: var(--navy);
             line-height: 1.15; margin-bottom: 1.25rem;
             letter-spacing: -0.02em;
         }
-
+ 
         .hero p {
             font-size: 1.1rem; color: var(--muted);
             max-width: 620px; margin: 0 auto 2.25rem;
             line-height: 1.75;
         }
-
+ 
         .btn {
             display: inline-block;
             background: var(--navy); color: var(--white);
@@ -121,40 +121,40 @@
             transition: background 0.2s, transform 0.15s;
             box-shadow: 0 2px 8px rgba(0,0,0,0.12);
         }
-
+ 
         .btn:hover { background: #0a1120; transform: translateY(-1px); }
-
+ 
         /* STORY SECTION */
         .story-section { padding: 5rem 0; }
-
+ 
         .story-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem; align-items: center;
         }
-
+ 
         .story-label {
             font-size: 0.72rem; font-weight: 700;
             letter-spacing: 0.14em; text-transform: uppercase;
             color: var(--orange); margin-bottom: 0.75rem;
         }
-
+ 
         .story-text h2 {
             font-size: 2rem; font-weight: 700;
             color: var(--navy); margin-bottom: 1rem;
             letter-spacing: -0.02em; line-height: 1.2;
         }
-
+ 
         .story-text p {
             color: var(--muted); font-size: 1rem;
             line-height: 1.8; margin-bottom: 1rem;
         }
-
+ 
         .tagline {
             font-size: 1.2rem; font-weight: 700;
             color: var(--orange); margin-top: 0.5rem;
         }
-
+ 
         .story-image {
             border-radius: 12px; overflow: hidden;
             box-shadow: 0 8px 32px rgba(0,0,0,0.1);
@@ -162,12 +162,12 @@
             background: linear-gradient(135deg, #1e3a5f 0%, #0f5132 100%);
             position: relative;
         }
-
+ 
         .story-image img {
             width: 100%; height: 100%;
             object-fit: cover; display: block;
         }
-
+ 
         /* image fallback SVG overlay */
         .story-image .img-fallback {
             position: absolute; inset: 0;
@@ -175,38 +175,38 @@
             align-items: center; justify-content: center;
             color: white; gap: 0.75rem;
         }
-
+ 
         .story-image .img-fallback svg {
             width: 64px; height: 64px; opacity: 0.9;
         }
-
+ 
         .story-image .img-fallback p {
             font-size: 1rem; font-weight: 600;
             opacity: 0.85; text-align: center;
             padding: 0 2rem;
         }
-
+ 
         /* HOW TO HELP */
         .help-section { background: var(--white); padding: 5rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-
+ 
         .section-header { text-align: center; margin-bottom: 3rem; }
-
+ 
         .section-header h2 {
             font-size: 1.875rem; font-weight: 700;
             color: var(--navy); letter-spacing: -0.02em;
             margin-bottom: 0.5rem;
         }
-
+ 
         .section-header p {
             color: var(--muted); font-size: 1rem; max-width: 520px; margin: 0 auto;
         }
-
+ 
         .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 1.5rem;
         }
-
+ 
         .card {
             background: var(--bg);
             padding: 2rem 2rem 2.25rem;
@@ -215,17 +215,17 @@
             border-top: 4px solid var(--green);
             text-align: center;
         }
-
+ 
         .card:nth-child(2) { border-top-color: var(--orange); }
         .card:nth-child(3) { border-top-color: var(--navy-mid); }
-
+ 
         .card h3 {
             font-size: 1.05rem; font-weight: 700;
             color: var(--navy); margin-bottom: 0.75rem;
         }
-
+ 
         .card p { color: var(--muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.5rem; }
-
+ 
         .btn-sm {
             display: inline-block;
             background: var(--navy); color: var(--white);
@@ -234,16 +234,16 @@
             font-weight: 600; font-size: 0.82rem;
             transition: background 0.2s;
         }
-
+ 
         .btn-sm:hover { background: #0a1120; }
-
+ 
         /* FAQ */
         .faq-section { padding: 5rem 0; }
-
+ 
         .faq-list { max-width: 740px; margin: 0 auto; }
-
+ 
         .faq-item { border-bottom: 1px solid var(--border); }
-
+ 
         .faq-question {
             width: 100%; background: none; border: none;
             text-align: left; padding: 1.25rem 0;
@@ -254,40 +254,40 @@
             font-family: 'Inter', 'Segoe UI', sans-serif;
             transition: color 0.2s;
         }
-
+ 
         .faq-question:hover { color: var(--orange); }
-
+ 
         .faq-chevron {
             flex-shrink: 0; font-size: 1rem;
             color: var(--muted); transition: transform 0.25s;
         }
-
+ 
         .faq-item.open .faq-chevron { transform: rotate(180deg); }
-
+ 
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
         .faq-item.open .faq-answer { max-height: 200px; }
-
+ 
         .faq-answer p {
             color: var(--muted); font-size: 0.95rem;
             line-height: 1.75; padding-bottom: 1.25rem;
         }
-
+ 
         /* CONTACT */
         .contact-section {
             background: var(--navy); color: var(--white);
             padding: 4.5rem 0; text-align: center;
         }
-
+ 
         .contact-section h2 {
             font-size: 1.875rem; font-weight: 700;
             margin-bottom: 0.75rem; letter-spacing: -0.02em;
         }
-
+ 
         .contact-section p {
             color: rgba(255,255,255,0.65);
             font-size: 1rem; margin-bottom: 1.75rem;
         }
-
+ 
         .contact-email {
             display: inline-block;
             font-size: 1rem; font-weight: 600;
@@ -297,9 +297,9 @@
             padding-bottom: 2px;
             transition: opacity 0.2s;
         }
-
+ 
         .contact-email:hover { opacity: 0.75; }
-
+ 
         /* ABOUT PAGE */
         .about-hero {
             padding: 4.5rem 0 3.5rem;
@@ -307,17 +307,17 @@
             text-align: center;
             border-bottom: 1px solid var(--border);
         }
-
+ 
         .about-hero h1 {
             font-size: 2.5rem; font-weight: 700;
             color: var(--navy); letter-spacing: -0.02em;
             margin-bottom: 0.75rem;
         }
-
+ 
         .about-hero p { font-size: 1.05rem; color: var(--muted); max-width: 540px; margin: 0 auto; }
-
+ 
         .mission-section { padding: 5rem 0; }
-
+ 
         .mission-box {
             background: var(--white);
             border-radius: 12px;
@@ -326,62 +326,62 @@
             padding: 3rem 3.5rem;
             max-width: 780px; margin: 0 auto 4rem;
         }
-
+ 
         .mission-box .label {
             font-size: 0.72rem; font-weight: 700;
             letter-spacing: 0.14em; text-transform: uppercase;
             color: var(--orange); margin-bottom: 1rem;
         }
-
+ 
         .mission-box p {
             font-size: 1.05rem; color: var(--text);
             line-height: 1.85; margin-bottom: 1rem;
         }
-
+ 
         .mission-box .tagline {
             font-size: 1.2rem; font-weight: 700;
             color: var(--orange); margin-top: 0.5rem; margin-bottom: 0;
         }
-
+ 
         .values-title {
             text-align: center; font-size: 1.5rem;
             font-weight: 700; color: var(--navy);
             margin-bottom: 2rem; letter-spacing: -0.01em;
         }
-
+ 
         .values-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.25rem; max-width: 860px; margin: 0 auto;
         }
-
+ 
         .value-card {
             background: var(--white); border-radius: 10px;
             border: 1px solid var(--border);
             padding: 1.75rem; text-align: center;
         }
-
+ 
         .value-card .icon { font-size: 1.75rem; margin-bottom: 0.6rem; }
-
+ 
         .value-card h3 {
             font-size: 0.95rem; font-weight: 700;
             color: var(--navy); margin-bottom: 0.4rem;
         }
-
+ 
         .value-card p { font-size: 0.875rem; color: var(--muted); line-height: 1.65; }
-
+ 
         /* FOOTER */
         footer {
             background: #07111f; color: rgba(255,255,255,0.55);
             text-align: center; padding: 2.5rem 0;
             border-top: 1px solid rgba(255,255,255,0.06);
         }
-
+ 
         footer p { font-size: 0.85rem; margin-bottom: 0.35rem; }
-
+ 
         footer a { color: var(--green); text-decoration: none; }
         footer a:hover { opacity: 0.8; }
-
+ 
         /* RESPONSIVE */
         @media (max-width: 768px) {
             .story-grid { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -391,7 +391,7 @@
     </style>
 </head>
 <body>
-
+ 
     <header>
         <div class="container nav-container">
             <div class="logo">The Match Point <span>Project</span></div>
@@ -405,10 +405,10 @@
             </nav>
         </div>
     </header>
-
+ 
     <!-- HOME -->
     <div id="page-home" class="page active">
-
+ 
         <section class="hero">
             <div class="container">
                 <div class="hero-eyebrow">Student-Led Initiative &mdash; Leigh High School</div>
@@ -417,7 +417,7 @@
                 <a href="#" class="btn" onclick="scrollToContact(); return false;">Get Involved</a>
             </div>
         </section>
-
+ 
         <section class="story-section">
             <div class="container story-grid">
                 <div class="story-text">
@@ -449,7 +449,7 @@
                 </div>
             </div>
         </section>
-
+ 
         <section id="how-to-help" class="help-section">
             <div class="container">
                 <div class="section-header">
@@ -474,7 +474,7 @@
                 </div>
             </div>
         </section>
-
+ 
         <section class="faq-section">
             <div class="container">
                 <div class="section-header">
@@ -529,7 +529,7 @@
                 </div>
             </div>
         </section>
-
+ 
         <section id="contact-section" class="contact-section">
             <div class="container">
                 <h2>Get In Touch</h2>
@@ -537,19 +537,19 @@
                 <a href="mailto:thematchpointproject.contact@gmail.com?subject=Hello%20from%20The%20Match%20Point%20Project&body=Hi%2C%20I%27d%20like%20to%20get%20in%20touch%20about..." class="contact-email">thematchpointproject.contact@gmail.com</a>
             </div>
         </section>
-
+ 
     </div><!-- end home -->
-
+ 
     <!-- ABOUT -->
     <div id="page-about" class="page">
-
+ 
         <section class="about-hero">
             <div class="container">
                 <h1>About Us</h1>
                 <p>We're students from Leigh High School on a mission to make tennis accessible to every kid in our community.</p>
             </div>
         </section>
-
+ 
         <section class="mission-section">
             <div class="container">
                 <div class="mission-box">
@@ -558,7 +558,7 @@
                     <p>We strive to ensure the next generation will continue to be able to participate in tennis at the highest level. We aim to ensure no child is left on the sidelines due to the cost of equipment.</p>
                     <p class="tagline">Racquets up!</p>
                 </div>
-
+ 
                 <h2 class="values-title">What We Stand For</h2>
                 <div class="values-grid">
                     <div class="value-card">
@@ -582,16 +582,16 @@
                         <p>Every donation — big or small — directly reaches a kid who needs it.</p>
                     </div>
                 </div>
-
+ 
                 <div style="text-align:center; margin-top:3.5rem;">
                     <p style="color:var(--muted); margin-bottom:1rem; font-size:0.975rem;">Want to reach out or get involved?</p>
                     <a href="mailto:thematchpointproject.contact@gmail.com?subject=Hello%20from%20The%20Match%20Point%20Project&body=Hi%2C%20I%27d%20like%20to%20get%20in%20touch%20about..." class="contact-email" style="color:var(--orange); border-color:var(--orange);">thematchpointproject.contact@gmail.com</a>
                 </div>
             </div>
         </section>
-
+ 
     </div><!-- end about -->
-
+ 
     <footer>
         <div class="container">
             <p style="font-weight:600; color:rgba(255,255,255,0.8); margin-bottom:0.5rem;">The Match Point Project</p>
@@ -600,7 +600,7 @@
             <p style="margin-top:1.25rem; font-size:0.78rem; opacity:0.4;">&copy; 2026 The Match Point Project. All rights reserved.</p>
         </div>
     </footer>
-
+ 
     <script>
         document.addEventListener('click', function(e) {
             const btn = e.target.closest('.faq-question');
@@ -616,13 +616,13 @@
                 btn.setAttribute('aria-expanded', 'true');
             }
         });
-
+ 
         function showPage(name) {
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
             document.getElementById('page-' + name).classList.add('active');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-
+ 
         function scrollToContact() {
             setTimeout(() => {
                 const el = document.getElementById('contact-section');
@@ -630,6 +630,6 @@
             }, 50);
         }
     </script>
-
+ 
 </body>
 </html>

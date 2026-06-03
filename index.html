@@ -3,11 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Match Point Project | Free Tennis Gear for Kids</title>
-    <meta name="description" content="The Match Point Project is a student-led initiative from Leigh High School dedicated to making tennis accessible to every kid by donating gear and raising funds for youth players in need.">
-    <meta property="og:title" content="The Match Point Project">
-    <meta property="og:description" content="A student-led initiative breaking down financial barriers and making tennis accessible to every child in our community.">
+    <title>Free Tennis Gear for Kids | The Match Point Project</title>
+    <meta name="description" content="No kid should miss out because of cost. We collect donated racquets & gear and put them in the hands of young players who need it most. Get involved today.">
+    <meta property="og:title" content="Free Tennis Gear for Kids | The Match Point Project">
+    <meta property="og:description" content="No kid should miss out because of cost. We collect donated racquets & gear and put them in the hands of young players who need it most. Get involved today.">
     <meta property="og:type" content="website">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How can I donate tennis equipment to kids?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Contact The Match Point Project at thematchpointproject.contact@gmail.com. We accept used racquets, tennis balls, and other gear in any condition. We clean and redistribute everything directly to young players in our community who can't afford equipment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is The Match Point Project a nonprofit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Match Point Project is a student-led community initiative started by students at Leigh High School. We collect donated tennis gear and funds to make the sport accessible to every child, regardless of their financial situation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does tennis equipment cost for kids?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A beginner tennis racquet costs $30–$100, and court fees, lessons, and balls add up quickly. For many families, this cost puts tennis out of reach — which is exactly why The Match Point Project collects and donates gear for free."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What do you do with donated tennis gear?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We collect used racquets, balls, and tennis equipment, clean them up, and give them directly to kids in our community who need them. No donation is too small — every piece of gear keeps a child on the court."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can students get involved in community tennis programs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Students can support The Match Point Project by donating spare gear, spreading the word at their school or tennis club, or reaching out directly at thematchpointproject.contact@gmail.com to get involved with our initiative."
+          }
+        }
+      ]
+    }
+    </script>
     <style>
         * {
             margin: 0;
@@ -298,6 +346,64 @@
             margin-bottom: 2rem;
         }
 
+        /* --- FAQ SECTION --- */
+        .faq-section {
+            padding: 5rem 0;
+            background-color: white;
+        }
+
+        .faq-list {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            padding: 1.5rem 0;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .faq-question:hover { color: var(--accent-color); }
+
+        .faq-chevron {
+            flex-shrink: 0;
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            transition: transform 0.25s;
+        }
+
+        .faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.open .faq-answer { max-height: 200px; }
+
+        .faq-answer p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.75;
+            padding-bottom: 1.5rem;
+        }
+
         /* --- CONTACT SECTION --- */
         .contact-section {
             padding: 4rem 0;
@@ -362,8 +468,8 @@
                 <ul class="nav-links">
                     <li><a href="#" onclick="showPage('home'); return false;">Home</a></li>
                     <li><a href="#" onclick="showPage('about'); return false;">About Us</a></li>
-                    <li><a href="#" onclick="showPage('home'); scrollToHelp(); return false;">How to Help</a></li>
-                    <li><a href="#contact" onclick="showPage('home'); return false;">Contact</a></li>
+                    <li><a href="#" onclick="showPage('home'); scrollToContact(); return false;">How to Help</a></li>
+                    <li><a href="#" onclick="showPage('home'); scrollToContact(); return false;">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -376,7 +482,7 @@
             <div class="container">
                 <h1>Keeping Kids on the Court</h1>
                 <p>A student-led initiative breaking down financial barriers and making tennis accessible to every single child in our community.</p>
-                <a href="#" class="cta-btn" onclick="showPage('home'); scrollToHelp(); return false;">Get Involved</a>
+                <a href="#" class="cta-btn" onclick="scrollToContact(); return false;">Get Involved</a>
             </div>
         </section>
 
@@ -404,13 +510,13 @@
                         <h3>Donate Gear</h3>
                         <p>Have old racquets, unused tennis balls, or extra gear lying around? We'll clean them up and get them into the hands of eager young players.</p>
                         <br>
-                        <a href="mailto:thematchpointproject.contact@gmail.com" class="cta-btn" style="font-size: 0.85rem; padding: 0.6rem 1.4rem;">Email Us to Donate</a>
+                        <a href="mailto:thematchpointproject.contact@gmail.com?subject=Gear%20Donation&body=Hi%2C%20I%27d%20like%20to%20donate%20some%20tennis%20gear!" class="cta-btn" style="font-size: 0.85rem; padding: 0.6rem 1.4rem;">Email Us to Donate</a>
                     </div>
                     <div class="card">
                         <h3>Financial Support</h3>
                         <p>Every dollar raised goes directly toward funding court time, coaching clinics, and brand new equipment for kids in need.</p>
                         <br>
-                        <a href="mailto:thematchpointproject.contact@gmail.com" class="cta-btn" style="font-size: 0.85rem; padding: 0.6rem 1.4rem;">Get in Touch</a>
+                        <a href="mailto:thematchpointproject.contact@gmail.com?subject=Financial%20Support&body=Hi%2C%20I%27d%20like%20to%20support%20The%20Match%20Point%20Project%20financially!" class="cta-btn" style="font-size: 0.85rem; padding: 0.6rem 1.4rem;">Get in Touch</a>
                     </div>
                     <div class="card">
                         <h3>Spread the Word</h3>
@@ -420,11 +526,70 @@
             </div>
         </section>
 
-        <section class="contact-section">
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-list">
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            How can I donate tennis equipment to kids?
+                            <span class="faq-chevron" aria-hidden="true">&#8964;</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Contact The Match Point Project at thematchpointproject.contact@gmail.com. We accept used racquets, tennis balls, and other gear in any condition. We clean and redistribute everything directly to young players in our community who can't afford equipment.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Is The Match Point Project a nonprofit?
+                            <span class="faq-chevron" aria-hidden="true">&#8964;</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>The Match Point Project is a student-led community initiative started by students at Leigh High School. We collect donated tennis gear and funds to make the sport accessible to every child, regardless of their financial situation.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            How much does tennis equipment cost for kids?
+                            <span class="faq-chevron" aria-hidden="true">&#8964;</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>A beginner tennis racquet costs $30–$100, and court fees, lessons, and balls add up quickly. For many families, this cost puts tennis out of reach — which is exactly why The Match Point Project collects and donates gear for free.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            What do you do with donated tennis gear?
+                            <span class="faq-chevron" aria-hidden="true">&#8964;</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We collect used racquets, balls, and tennis equipment, clean them up, and give them directly to kids in our community who need them. No donation is too small — every piece of gear keeps a child on the court.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            How can students get involved in community tennis programs?
+                            <span class="faq-chevron" aria-hidden="true">&#8964;</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Students can support The Match Point Project by donating spare gear, spreading the word at their school or tennis club, or reaching out directly at thematchpointproject.contact@gmail.com to get involved with our initiative.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-section" class="contact-section">
             <div class="container">
                 <h2>Get In Touch</h2>
                 <p>Questions, donations, or just want to support the cause? We'd love to hear from you.</p>
-                <a href="mailto:thematchpointproject.contact@gmail.com" class="contact-email">thematchpointproject.contact@gmail.com</a>
+                <a href="mailto:thematchpointproject.contact@gmail.com?subject=Hello%20from%20The%20Match%20Point%20Project&body=Hi%2C%20I%27d%20like%20to%20get%20in%20touch%20about..." class="contact-email">thematchpointproject.contact@gmail.com</a>
             </div>
         </section>
 
@@ -476,7 +641,7 @@
 
                 <div style="text-align: center; margin-top: 4rem;">
                     <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 1.05rem;">Want to reach out or get involved?</p>
-                    <a href="mailto:thematchpointproject.contact@gmail.com" class="contact-email">thematchpointproject.contact@gmail.com</a>
+                    <a href="mailto:thematchpointproject.contact@gmail.com?subject=Hello%20from%20The%20Match%20Point%20Project&body=Hi%2C%20I%27d%20like%20to%20get%20in%20touch%20about..." class="contact-email">thematchpointproject.contact@gmail.com</a>
                 </div>
 
             </div>
@@ -488,21 +653,36 @@
         <div class="container">
             <p style="margin-bottom: 1rem; font-weight: bold;">The Match Point Project</p>
             <p style="margin-bottom: 0.5rem;">A Student-Led Community Initiative &mdash; Leigh High School</p>
-            <p style="margin-bottom: 1.5rem;"><a href="mailto:thematchpointproject.contact@gmail.com" style="color: var(--primary-color); text-decoration: none;">thematchpointproject.contact@gmail.com</a></p>
+            <p style="margin-bottom: 1.5rem;"><a href="mailto:thematchpointproject.contact@gmail.com?subject=Hello%20from%20The%20Match%20Point%20Project&body=Hi%2C%20I%27d%20like%20to%20get%20in%20touch%20about..." style="color: var(--primary-color); text-decoration: none;">thematchpointproject.contact@gmail.com</a></p>
             <p>&copy; 2026 The Match Point Project. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
+        document.addEventListener('click', function(e) {
+            const btn = e.target.closest('.faq-question');
+            if (!btn) return;
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item.open').forEach(i => {
+                i.classList.remove('open');
+                i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            });
+            if (!isOpen) {
+                item.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+        });
+
         function showPage(name) {
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
             document.getElementById('page-' + name).classList.add('active');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        function scrollToHelp() {
+        function scrollToContact() {
             setTimeout(() => {
-                const el = document.getElementById('how-to-help');
+                const el = document.getElementById('contact-section');
                 if (el) el.scrollIntoView({ behavior: 'smooth' });
             }, 50);
         }

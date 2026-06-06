@@ -499,6 +499,120 @@
             .contact-page-grid { grid-template-columns: 1fr; gap: 2.5rem; }
         }
  
+        /* DONATE PAGE */
+        .donate-hero {
+            padding: 4.5rem 0 3.5rem;
+            background: linear-gradient(160deg, #eff6ff 0%, #fef9c3 100%);
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+ 
+        .donate-hero h1 {
+            font-size: 2.5rem; font-weight: 700;
+            color: var(--navy); letter-spacing: -0.02em;
+            margin-bottom: 0.75rem;
+        }
+ 
+        .donate-hero p {
+            font-size: 1.05rem; color: var(--muted);
+            max-width: 520px; margin: 0 auto;
+        }
+ 
+        .donate-body { padding: 5rem 0; }
+ 
+        .donate-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 3rem;
+            max-width: 680px;
+            margin: 0 auto 2rem;
+            text-align: center;
+        }
+ 
+        .donate-card .donate-icon {
+            font-size: 2.5rem; margin-bottom: 1rem;
+        }
+ 
+        .donate-card h2 {
+            font-size: 1.5rem; font-weight: 700;
+            color: var(--navy); margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+        }
+ 
+        .donate-card p {
+            color: var(--muted); font-size: 1rem;
+            line-height: 1.8; margin-bottom: 2rem;
+            max-width: 480px; margin-left: auto; margin-right: auto;
+        }
+ 
+        .donate-card p + .btn { margin-top: 0; }
+ 
+        .donate-card .btn-gofundme {
+            display: inline-block;
+            background: #02a95c;
+            color: var(--white);
+            padding: 0.85rem 2.5rem;
+            border-radius: 6px; text-decoration: none;
+            font-weight: 700; font-size: 1rem;
+            transition: background 0.2s, transform 0.15s;
+            box-shadow: 0 2px 12px rgba(2,169,92,0.25);
+        }
+ 
+        .donate-card .btn-gofundme:hover {
+            background: #019950;
+            transform: translateY(-1px);
+        }
+ 
+        .donate-divider {
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin: 1rem 0;
+            position: relative;
+            max-width: 680px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+ 
+        .donate-divider::before,
+        .donate-divider::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 40%;
+            height: 1px;
+            background: var(--border);
+        }
+ 
+        .donate-divider::before { left: 0; }
+        .donate-divider::after { right: 0; }
+ 
+        .donate-gear-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2.5rem 3rem;
+            max-width: 680px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+ 
+        .donate-gear-card .dgc-text h3 {
+            font-size: 1.1rem; font-weight: 700;
+            color: var(--navy); margin-bottom: 0.4rem;
+        }
+ 
+        .donate-gear-card .dgc-text p {
+            font-size: 0.9rem; color: var(--muted); line-height: 1.7;
+        }
+ 
         /* FOOTER */
         footer {
             background: #07111f; color: rgba(255,255,255,0.55);
@@ -528,7 +642,7 @@
                 <ul class="nav-links">
                     <li><a href="#" onclick="showPage('home'); return false;">Home</a></li>
                     <li><a href="#" onclick="showPage('about'); return false;">About Us</a></li>
-                    <li><a href="#" onclick="showPage('contact'); scrollToGofundme(); return false;">Donate Money</a></li>
+                    <li><a href="#" onclick="showPage('donate'); return false;">Donate Money</a></li>
                     <li><a href="#" onclick="showPage('contact'); return false;">Contact</a></li>
                 </ul>
             </nav>
@@ -595,7 +709,7 @@
                     <div class="card">
                         <h3>Financial Support</h3>
                         <p>Every dollar raised goes directly toward funding court time, coaching clinics, and brand new equipment for kids in need.</p>
-                        <a href="#" onclick="showPage('contact'); scrollToGofundme(); return false;" class="btn-sm">Get in Touch</a>
+                        <a href="#" onclick="showPage('donate'); return false;" class="btn-sm">Get in Touch</a>
                     </div>
                     <div class="card">
                         <h3>Spread the Word</h3>
@@ -760,33 +874,59 @@
  
                 </div>
  
-                <!-- GOOGLE FORM EMBED -->
-                <div style="margin-top:2.5rem; background:var(--white); border:1px solid var(--border); border-radius:12px; overflow:hidden;">
+                <!-- GOOGLE FORM EMBED - styled to blend with site -->
+                <div style="margin-top:2.5rem; border-radius:12px; overflow:hidden; border:1px solid var(--border);">
                     <iframe
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSemXq7ZAkUvMOEwMwzJAjCuJicVHjMnvhdCyKAdPT_rV1tA5A/viewform?embedded=true"
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSemXq7ZAkUvMOEwMwzJAjCuJicVHjMnvhdCyKAdPT_rV1tA5A/viewform?embedded=true&hl=en&rm=minimal"
                         width="100%"
-                        height="700"
+                        height="680"
                         frameborder="0"
                         marginheight="0"
                         marginwidth="0"
                         title="Send Us a Message"
-                        style="display:block;"
+                        style="display:block; background:var(--white);"
                     >Loading form…</iframe>
-                </div>
- 
-                <!-- GOFUNDME SECTION -->
-                <div id="gofundme-section" style="margin-top:3.5rem; background:var(--white); border:1px solid var(--border); border-radius:12px; padding:2.5rem; display:flex; align-items:center; justify-content:space-between; gap:2rem; flex-wrap:wrap; border-left:5px solid var(--green);">
-                    <div>
-                        <p style="font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--orange); margin-bottom:0.5rem;">Donate Financially</p>
-                        <h3 style="font-size:1.3rem; font-weight:700; color:var(--navy); margin-bottom:0.5rem; letter-spacing:-0.01em;">Support Us on GoFundMe</h3>
-                        <p style="font-size:0.95rem; color:var(--muted); line-height:1.75; max-width:540px;">Every dollar goes directly toward court time, coaching clinics, and brand new equipment for kids in need. No amount is too small — donate securely through our GoFundMe page.</p>
-                    </div>
-                    <a href="https://www.gofundme.com/f/match-point-project-tennis-for-all" target="_blank" rel="noopener noreferrer" class="btn" style="white-space:nowrap; flex-shrink:0;">Donate on GoFundMe &rarr;</a>
                 </div>
             </div>
         </section>
  
     </div><!-- end contact -->
+ 
+    <!-- DONATE PAGE -->
+    <div id="page-donate" class="page">
+ 
+        <section class="donate-hero">
+            <div class="container">
+                <h1>Donate Money</h1>
+                <p>Your financial support goes directly toward giving kids the equipment and court time they need to play.</p>
+            </div>
+        </section>
+ 
+        <section class="donate-body">
+            <div class="container">
+ 
+                <div class="donate-card">
+                    <div class="donate-icon" aria-hidden="true">💛</div>
+                    <h2>Support Us on GoFundMe</h2>
+                    <p>Every dollar raised funds court time, coaching clinics, and brand new equipment for kids in need. No amount is too small — 100% goes directly to young players in our community.</p>
+                    <a href="https://www.gofundme.com/f/match-point-project-tennis-for-all" target="_blank" rel="noopener noreferrer" class="btn-gofundme">Donate on GoFundMe &rarr;</a>
+                </div>
+ 
+                <div class="donate-divider">or</div>
+ 
+                <div class="donate-gear-card">
+                    <div class="donate-icon" aria-hidden="true" style="font-size:2rem; flex-shrink:0;">🎾</div>
+                    <div class="dgc-text">
+                        <h3>Want to Donate Gear Instead?</h3>
+                        <p>We also accept racquets, balls, strings, and all tennis gear. Reach out to us on the Contact page and we'll arrange a drop-off.</p>
+                    </div>
+                    <a href="#" onclick="showPage('contact'); return false;" class="btn-sm" style="flex-shrink:0;">Go to Contact</a>
+                </div>
+ 
+            </div>
+        </section>
+ 
+    </div><!-- end donate -->
  
     <footer>
         <div class="container">

@@ -370,6 +370,135 @@
  
         .value-card p { font-size: 0.875rem; color: var(--muted); line-height: 1.65; }
  
+        /* CONTACT PAGE */
+        .contact-page-hero {
+            padding: 4.5rem 0 3.5rem;
+            background: linear-gradient(160deg, #eff6ff 0%, #fef9c3 100%);
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+ 
+        .contact-page-hero h1 {
+            font-size: 2.5rem; font-weight: 700;
+            color: var(--navy); letter-spacing: -0.02em;
+            margin-bottom: 0.75rem;
+        }
+ 
+        .contact-page-hero p {
+            font-size: 1.05rem; color: var(--muted);
+            max-width: 520px; margin: 0 auto;
+        }
+ 
+        .contact-page-body { padding: 5rem 0; }
+ 
+        .contact-page-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem; align-items: start;
+            max-width: 900px; margin: 0 auto;
+        }
+ 
+        .contact-info h2 {
+            font-size: 1.4rem; font-weight: 700;
+            color: var(--navy); margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+ 
+        .contact-info p {
+            color: var(--muted); font-size: 0.975rem;
+            line-height: 1.8; margin-bottom: 1.5rem;
+        }
+ 
+        .contact-info-item {
+            display: flex; align-items: flex-start;
+            gap: 0.75rem; margin-bottom: 1.25rem;
+        }
+ 
+        .contact-info-item .ci-icon {
+            font-size: 1.1rem; margin-top: 0.1rem;
+        }
+ 
+        .contact-info-item div { display: flex; flex-direction: column; }
+ 
+        .contact-info-item .ci-label {
+            font-size: 0.72rem; font-weight: 700;
+            letter-spacing: 0.12em; text-transform: uppercase;
+            color: var(--orange); margin-bottom: 0.2rem;
+        }
+ 
+        .contact-info-item a, .contact-info-item span {
+            font-size: 0.95rem; color: var(--navy);
+            font-weight: 500; text-decoration: none;
+        }
+ 
+        .contact-info-item a:hover { color: var(--orange); }
+ 
+        .contact-form-box {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2.5rem;
+        }
+ 
+        .contact-form-box h2 {
+            font-size: 1.2rem; font-weight: 700;
+            color: var(--navy); margin-bottom: 1.5rem;
+        }
+ 
+        .form-group { margin-bottom: 1.25rem; }
+ 
+        .form-group label {
+            display: block; font-size: 0.8rem;
+            font-weight: 600; color: var(--navy);
+            margin-bottom: 0.4rem; letter-spacing: 0.02em;
+        }
+ 
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.65rem 0.875rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            transition: border-color 0.2s;
+            outline: none;
+        }
+ 
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--navy);
+        }
+ 
+        .form-group textarea { resize: vertical; min-height: 110px; }
+ 
+        .form-submit {
+            width: 100%;
+            background: var(--navy); color: var(--white);
+            border: none; padding: 0.8rem;
+            border-radius: 6px; font-size: 0.9rem;
+            font-weight: 600; cursor: pointer;
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            transition: background 0.2s;
+            text-decoration: none; display: block;
+            text-align: center;
+        }
+ 
+        .form-submit:hover { background: #0a1120; }
+ 
+        .form-note {
+            font-size: 0.78rem; color: var(--muted);
+            text-align: center; margin-top: 0.75rem;
+        }
+ 
+        @media (max-width: 768px) {
+            .contact-page-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+        }
+ 
         /* FOOTER */
         footer {
             background: #07111f; color: rgba(255,255,255,0.55);
@@ -399,8 +528,8 @@
                 <ul class="nav-links">
                     <li><a href="#" onclick="showPage('home'); return false;">Home</a></li>
                     <li><a href="#" onclick="showPage('about'); return false;">About Us</a></li>
-                    <li><a href="#" onclick="showPage('home'); scrollToContact(); return false;">How to Help</a></li>
-                    <li><a href="#" onclick="showPage('home'); scrollToContact(); return false;">Contact</a></li>
+                    <li><a href="#" onclick="showPage('contact'); scrollToGofundme(); return false;">Donate Money</a></li>
+                    <li><a href="#" onclick="showPage('contact'); return false;">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -414,7 +543,7 @@
                 <div class="hero-eyebrow">Student-Led Initiative &mdash; Leigh High School</div>
                 <h1>Keeping Kids on the Court</h1>
                 <p>Breaking down financial barriers and making tennis accessible to every child in our community &mdash; one racquet at a time.</p>
-                <a href="#" class="btn" onclick="scrollToContact(); return false;">Get Involved</a>
+                <a href="#" class="btn" onclick="showPage('contact'); return false;">Get Involved</a>
             </div>
         </section>
  
@@ -424,6 +553,7 @@
                     <div class="story-label">Our Story</div>
                     <h2>Making Tennis Accessible to Every Kid</h2>
                     <p>The Match Point Project is a student-led initiative dedicated to making tennis accessible to every kid. Our mission is to give back to our community by collecting spare tennis gear and money.</p>
+                    <p>As passionate tennis players ourselves, we know firsthand the joy this sport brings — and we believe every kid deserves that same chance to play.</p>
                     <p>We strive to ensure the next generation will continue to be able to participate in tennis at the highest level. We aim to ensure no child is left on the sidelines due to the cost of equipment.</p>
                     <p class="tagline">Racquets up!</p>
                     <br>
@@ -460,12 +590,12 @@
                     <div class="card">
                         <h3>Donate Gear</h3>
                         <p>Have old racquets, unused tennis balls, or extra gear? We'll clean them up and get them into the hands of eager young players.</p>
-                        <a href="mailto:thematchpointproject.contact@gmail.com?subject=Gear%20Donation&body=Hi%2C%20I%27d%20like%20to%20donate%20some%20tennis%20gear!" class="btn-sm">Email Us to Donate</a>
+                        <a href="#" onclick="showPage('contact'); return false;" class="btn-sm">Email Us to Donate</a>
                     </div>
                     <div class="card">
                         <h3>Financial Support</h3>
                         <p>Every dollar raised goes directly toward funding court time, coaching clinics, and brand new equipment for kids in need.</p>
-                        <a href="mailto:thematchpointproject.contact@gmail.com?subject=Financial%20Support&body=Hi%2C%20I%27d%20like%20to%20support%20The%20Match%20Point%20Project%20financially!" class="btn-sm">Get in Touch</a>
+                        <a href="#" onclick="showPage('contact'); scrollToGofundme(); return false;" class="btn-sm">Get in Touch</a>
                     </div>
                     <div class="card">
                         <h3>Spread the Word</h3>
@@ -530,14 +660,6 @@
             </div>
         </section>
  
-        <section id="contact-section" class="contact-section">
-            <div class="container">
-                <h2>Get In Touch</h2>
-                <p>Questions, donations, or just want to support the cause? We'd love to hear from you.</p>
-                <a href="mailto:thematchpointproject.contact@gmail.com?subject=Hello%20from%20The%20Match%20Point%20Project&body=Hi%2C%20I%27d%20like%20to%20get%20in%20touch%20about..." class="contact-email">thematchpointproject.contact@gmail.com</a>
-            </div>
-        </section>
- 
     </div><!-- end home -->
  
     <!-- ABOUT -->
@@ -555,6 +677,7 @@
                 <div class="mission-box">
                     <div class="label">Our Mission Statement</div>
                     <p>The Match Point Project is a student-led initiative from Leigh High School dedicated to making tennis accessible to every kid. Our mission is to give back to our community by collecting spare tennis gear and money.</p>
+                    <p>As passionate tennis players ourselves, we know firsthand the joy this sport brings — and we believe every kid deserves that same chance to play.</p>
                     <p>We strive to ensure the next generation will continue to be able to participate in tennis at the highest level. We aim to ensure no child is left on the sidelines due to the cost of equipment.</p>
                     <p class="tagline">Racquets up!</p>
                 </div>
@@ -592,6 +715,93 @@
  
     </div><!-- end about -->
  
+    <!-- CONTACT PAGE -->
+    <div id="page-contact" class="page">
+ 
+        <section class="contact-page-hero">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Whether you want to donate gear, support us financially, or just say hello — we'd love to hear from you.</p>
+            </div>
+        </section>
+ 
+        <section class="contact-page-body">
+            <div class="container">
+                <div class="contact-page-grid">
+ 
+                    <div class="contact-info">
+                        <h2>Get In Touch</h2>
+                        <p>We're a student-led team from Leigh High School. Reach out any time and we'll get back to you as soon as we can.</p>
+ 
+                        <div class="contact-info-item">
+                            <span class="ci-icon" aria-hidden="true">📧</span>
+                            <div>
+                                <span class="ci-label">Email</span>
+                                <a href="mailto:thematchpointproject.contact@gmail.com?subject=Hello%20from%20The%20Match%20Point%20Project&body=Hi%2C%20I%27d%20like%20to%20get%20in%20touch%20about...">thematchpointproject.contact@gmail.com</a>
+                            </div>
+                        </div>
+ 
+                        <div class="contact-info-item">
+                            <span class="ci-icon" aria-hidden="true">🏫</span>
+                            <div>
+                                <span class="ci-label">School</span>
+                                <span>Leigh High School</span>
+                            </div>
+                        </div>
+ 
+                        <div class="contact-info-item">
+                            <span class="ci-icon" aria-hidden="true">🎾</span>
+                            <div>
+                                <span class="ci-label">We Accept</span>
+                                <span>Racquets, balls, strings, all tennis gear & monetary donations</span>
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <div class="contact-form-box">
+                        <h2>Send Us a Message</h2>
+                        <div class="form-group">
+                            <label for="cf-name">Your Name</label>
+                            <input type="text" id="cf-name" placeholder="Jane Smith">
+                        </div>
+                        <div class="form-group">
+                            <label for="cf-email">Your Email</label>
+                            <input type="email" id="cf-email" placeholder="jane@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="cf-reason">Reason for Contact</label>
+                            <select id="cf-reason">
+                                <option value="">Select one...</option>
+                                <option value="gear">Donate Gear</option>
+                                <option value="money">Financial Support</option>
+                                <option value="partner">Partnership / Collaboration</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="cf-message">Message</label>
+                            <textarea id="cf-message" placeholder="Tell us how you'd like to help..."></textarea>
+                        </div>
+                        <a id="form-send-btn" href="#" class="form-submit" onclick="sendContactEmail(); return false;">Send Message</a>
+                        <p class="form-note">Clicking send will open your email app with your message pre-filled.</p>
+                    </div>
+ 
+                </div>
+ 
+                <!-- GOFUNDME SECTION -->
+                <div id="gofundme-section" style="margin-top:3.5rem; background:var(--white); border:1px solid var(--border); border-radius:12px; padding:2.5rem; display:flex; align-items:center; justify-content:space-between; gap:2rem; flex-wrap:wrap; border-left:5px solid var(--green);">
+                    <div>
+                        <p style="font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--orange); margin-bottom:0.5rem;">Donate Financially</p>
+                        <h3 style="font-size:1.3rem; font-weight:700; color:var(--navy); margin-bottom:0.5rem; letter-spacing:-0.01em;">Support Us on GoFundMe</h3>
+                        <p style="font-size:0.95rem; color:var(--muted); line-height:1.75; max-width:540px;">Every dollar goes directly toward court time, coaching clinics, and brand new equipment for kids in need. No amount is too small — donate securely through our GoFundMe page.</p>
+                    </div>
+                    <a href="https://www.gofundme.com/f/match-point-project-tennis-for-all" target="_blank" rel="noopener noreferrer" class="btn" style="white-space:nowrap; flex-shrink:0;">Donate on GoFundMe &rarr;</a>
+                </div>
+            </div>
+        </section>
+ 
+    </div><!-- end contact -->
+ 
     <footer>
         <div class="container">
             <p style="font-weight:600; color:rgba(255,255,255,0.8); margin-bottom:0.5rem;">The Match Point Project</p>
@@ -616,6 +826,37 @@
                 btn.setAttribute('aria-expanded', 'true');
             }
         });
+ 
+        function sendContactEmail() {
+            const name = document.getElementById('cf-name').value.trim();
+            const email = document.getElementById('cf-email').value.trim();
+            const reason = document.getElementById('cf-reason').value;
+            const message = document.getElementById('cf-message').value.trim();
+ 
+            const reasonLabels = {
+                gear: 'Gear Donation',
+                money: 'Financial Support',
+                partner: 'Partnership / Collaboration',
+                other: 'General Inquiry'
+            };
+ 
+            const subject = encodeURIComponent(reasonLabels[reason] || 'Hello from The Match Point Project');
+            const body = encodeURIComponent(
+                `Name: ${name || 'Not provided'}\nEmail: ${email || 'Not provided'}\n\n${message || '(No message entered)'}`
+            );
+ 
+            window.location.href = `mailto:thematchpointproject.contact@gmail.com?subject=${subject}&body=${body}`;
+        }
+ 
+        function scrollToGofundme() {
+            setTimeout(() => {
+                const el = document.getElementById('gofundme-section');
+                if (el) {
+                    const top = el.getBoundingClientRect().top + window.scrollY - 90;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            }, 50);
+        }
  
         function showPage(name) {
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));

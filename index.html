@@ -841,41 +841,28 @@
  
         <section class="contact-page-body">
             <div class="container">
-                <div class="contact-page-grid">
  
-                    <div class="contact-info">
-                        <h2>Get In Touch</h2>
-                        <p>We're a student-led team from Leigh High School. Reach out any time and we'll get back to you as soon as we can.</p>
- 
-                        <div class="contact-info-item">
-                            <span class="ci-icon" aria-hidden="true">📧</span>
-                            <div>
-                                <span class="ci-label">Email</span>
-                                <a href="mailto:thematchpointproject.contact@gmail.com?subject=Hello%20from%20The%20Match%20Point%20Project&body=Hi%2C%20I%27d%20like%20to%20get%20in%20touch%20about...">thematchpointproject.contact@gmail.com</a>
-                            </div>
-                        </div>
- 
-                        <div class="contact-info-item">
-                            <span class="ci-icon" aria-hidden="true">🏫</span>
-                            <div>
-                                <span class="ci-label">School</span>
-                                <span>Leigh High School</span>
-                            </div>
-                        </div>
- 
-                        <div class="contact-info-item">
-                            <span class="ci-icon" aria-hidden="true">🎾</span>
-                            <div>
-                                <span class="ci-label">We Accept</span>
-                                <span>Racquets, balls, strings, all tennis gear & monetary donations</span>
-                            </div>
-                        </div>
+                <!-- INFO STRIP - centered 3 columns -->
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:1.5rem; margin-bottom:3rem;">
+                    <div style="background:var(--white); border:1px solid var(--border); border-radius:10px; padding:1.75rem; text-align:center;">
+                        <div style="font-size:1.5rem; margin-bottom:0.6rem;" aria-hidden="true">📧</div>
+                        <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--orange); margin-bottom:0.4rem;">Email</div>
+                        <a href="mailto:thematchpointproject.contact@gmail.com?subject=Hello%20from%20The%20Match%20Point%20Project&body=Hi%2C%20I%27d%20like%20to%20get%20in%20touch%20about..." style="font-size:0.85rem; color:var(--navy); font-weight:500; text-decoration:none; word-break:break-all;">thematchpointproject.contact@gmail.com</a>
                     </div>
- 
+                    <div style="background:var(--white); border:1px solid var(--border); border-radius:10px; padding:1.75rem; text-align:center;">
+                        <div style="font-size:1.5rem; margin-bottom:0.6rem;" aria-hidden="true">🏫</div>
+                        <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--orange); margin-bottom:0.4rem;">School</div>
+                        <span style="font-size:0.95rem; color:var(--navy); font-weight:500;">Leigh High School</span>
+                    </div>
+                    <div style="background:var(--white); border:1px solid var(--border); border-radius:10px; padding:1.75rem; text-align:center;">
+                        <div style="font-size:1.5rem; margin-bottom:0.6rem;" aria-hidden="true">🎾</div>
+                        <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--orange); margin-bottom:0.4rem;">We Accept</div>
+                        <span style="font-size:0.9rem; color:var(--navy); font-weight:500;">Racquets, balls, strings, all gear & monetary donations</span>
+                    </div>
                 </div>
  
-                <!-- GOOGLE FORM EMBED - styled to blend with site -->
-                <div style="margin-top:2.5rem; border-radius:12px; overflow:hidden; border:1px solid var(--border);">
+                <!-- FORM - Tally embed goes here -->
+                <div style="background:var(--white); border:1px solid var(--border); border-radius:12px; overflow:hidden;">
                     <iframe
                         src="https://docs.google.com/forms/d/e/1FAIpQLSemXq7ZAkUvMOEwMwzJAjCuJicVHjMnvhdCyKAdPT_rV1tA5A/viewform?embedded=true&hl=en&rm=minimal"
                         width="100%"
@@ -884,9 +871,10 @@
                         marginheight="0"
                         marginwidth="0"
                         title="Send Us a Message"
-                        style="display:block; background:var(--white);"
+                        style="display:block;"
                     >Loading form…</iframe>
                 </div>
+ 
             </div>
         </section>
  

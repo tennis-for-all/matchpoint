@@ -15,7 +15,7 @@
       "@type": "FAQPage",
       "mainEntity": [
         {"@type":"Question","name":"How can I donate tennis equipment to kids?","acceptedAnswer":{"@type":"Answer","text":"Contact The Match Point Project at thematchpointproject.contact@gmail.com. We accept used racquets, tennis balls, and other gear in any condition. We clean and redistribute everything directly to young players in our community who can't afford equipment."}},
-        {"@type":"Question","name":"Is The Match Point Project a nonprofit?","acceptedAnswer":{"@type":"Answer","text":"The Match Point Project is a student-led community initiative started by students at Leigh High School. We collect donated tennis gear to make the sport accessible to every child, regardless of their financial situation."}},
+        {"@type":"Question","name":"Is The Match Point Project a nonprofit?","acceptedAnswer":{"@type":"Answer","text":"The Match Point Project is a student-led community initiative started by students at Leigh High School. We collect donated tennis gear and funds to make the sport accessible to every child, regardless of their financial situation."}},
         {"@type":"Question","name":"How much does tennis equipment cost for kids?","acceptedAnswer":{"@type":"Answer","text":"A beginner tennis racquet costs $30-$100, and court fees, lessons, and balls add up quickly. For many families, this cost puts tennis out of reach - which is exactly why The Match Point Project collects and donates gear for free."}},
         {"@type":"Question","name":"What do you do with donated tennis gear?","acceptedAnswer":{"@type":"Answer","text":"We collect used racquets, balls, and tennis equipment, clean them up, and give them directly to kids in our community who need them. No donation is too small - every piece of gear keeps a child on the court."}},
         {"@type":"Question","name":"How can students get involved in community tennis programs?","acceptedAnswer":{"@type":"Answer","text":"Students can support The Match Point Project by donating spare gear, spreading the word at their school or tennis club, or reaching out directly at thematchpointproject.contact@gmail.com to get involved with our initiative."}}
@@ -374,6 +374,66 @@
         .form-success h3 { font-size: 1.15rem; font-weight: 700; color: #166534; margin-bottom: 0.4rem; }
         .form-success p { font-size: 0.95rem; color: #15803d; line-height: 1.7; }
  
+        /* DONATE PAGE */
+        .donate-hero {
+            padding: 4.5rem 0 3.5rem;
+            background: linear-gradient(160deg, #eff6ff 0%, #fef9c3 100%);
+            text-align: center; border-bottom: 1px solid var(--border);
+        }
+ 
+        .donate-hero h1 { font-size: 2.5rem; font-weight: 700; color: var(--navy); letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+        .donate-hero p { font-size: 1.05rem; color: var(--muted); max-width: 520px; margin: 0 auto; }
+ 
+        .donate-body { padding: 5rem 0; }
+ 
+        .donate-card {
+            background: var(--white); border: 1px solid var(--border);
+            border-radius: 12px; padding: 3rem;
+            max-width: 680px; margin: 0 auto 2rem; text-align: center;
+        }
+ 
+        .donate-card .donate-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+ 
+        .donate-card h2 { font-size: 1.5rem; font-weight: 700; color: var(--navy); margin-bottom: 0.75rem; letter-spacing: -0.01em; }
+ 
+        .donate-card p { color: var(--muted); font-size: 1rem; line-height: 1.8; margin-bottom: 2rem; max-width: 480px; margin-left: auto; margin-right: auto; }
+ 
+        .btn-gofundme {
+            display: inline-block; background: #02a95c; color: var(--white);
+            padding: 0.85rem 2.5rem; border-radius: 6px; text-decoration: none;
+            font-weight: 700; font-size: 1rem;
+            transition: background 0.2s, transform 0.15s;
+            box-shadow: 0 2px 12px rgba(2,169,92,0.25);
+        }
+ 
+        .btn-gofundme:hover { background: #019950; transform: translateY(-1px); }
+ 
+        .donate-divider {
+            text-align: center; color: var(--muted);
+            font-size: 0.85rem; font-weight: 600;
+            letter-spacing: 0.08em; text-transform: uppercase;
+            margin: 1rem auto; position: relative; max-width: 680px;
+        }
+ 
+        .donate-divider::before,
+        .donate-divider::after {
+            content: ''; position: absolute; top: 50%;
+            width: 40%; height: 1px; background: var(--border);
+        }
+ 
+        .donate-divider::before { left: 0; }
+        .donate-divider::after { right: 0; }
+ 
+        .donate-gear-card {
+            background: var(--white); border: 1px solid var(--border);
+            border-radius: 12px; padding: 2.5rem 3rem;
+            max-width: 680px; margin: 0 auto;
+            display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;
+        }
+ 
+        .donate-gear-card .dgc-text h3 { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+        .donate-gear-card .dgc-text p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+ 
         footer {
             background: #07111f; color: rgba(255,255,255,0.55);
             text-align: center; padding: 2.5rem 0;
@@ -401,6 +461,7 @@
                 <ul class="nav-links">
                     <li><a href="#" onclick="showPage('home'); return false;">Home</a></li>
                     <li><a href="#" onclick="showPage('about'); return false;">About Us</a></li>
+                    <li><a href="#" onclick="showPage('donate'); return false;">Donate Money</a></li>
                     <li><a href="#" onclick="showPage('contact'); return false;">Contact</a></li>
                 </ul>
             </nav>
@@ -414,7 +475,7 @@
             <div class="container">
                 <div class="hero-eyebrow">Student-Led Initiative &mdash; Leigh High School</div>
                 <h1>Keeping Kids on the Court</h1>
-                <p>Breaking down cost barriers and making tennis accessible to every child in our community &mdash; one racquet at a time.</p>
+                <p>Breaking down financial barriers and making tennis accessible to every child in our community &mdash; one racquet at a time.</p>
                 <a href="#" class="btn" onclick="showPage('contact'); return false;">Get Involved</a>
             </div>
         </section>
@@ -424,7 +485,7 @@
                 <div class="story-text">
                     <div class="story-label">Our Story</div>
                     <h2>Making Tennis Accessible to Every Kid</h2>
-                    <p>The Match Point Project is a student-led initiative dedicated to making tennis accessible to every kid. Our mission is to give back to our community by collecting spare tennis gear.</p>
+                    <p>The Match Point Project is a student-led initiative dedicated to making tennis accessible to every kid. Our mission is to give back to our community by collecting spare tennis gear and money.</p>
                     <p>As passionate tennis players ourselves, we know firsthand the joy this sport brings &mdash; and we believe every kid deserves that same chance to play.</p>
                     <p>We strive to ensure the next generation will continue to be able to participate in tennis at the highest level. We aim to ensure no child is left on the sidelines due to the cost of equipment.</p>
                     <p>We're working with local Boys &amp; Girls Club sites to get donated racquets directly into the hands of kids who can use them.</p>
@@ -465,6 +526,11 @@
                         <a href="#" onclick="showPage('contact'); return false;" class="btn-sm">Email Us to Donate</a>
                     </div>
                     <div class="card">
+                        <h3>Financial Support</h3>
+                        <p>Every dollar raised goes directly toward funding court time, coaching clinics, and brand new equipment for kids in need.</p>
+                        <a href="#" onclick="showPage('donate'); return false;" class="btn-sm">Get in Touch</a>
+                    </div>
+                    <div class="card">
                         <h3>Spread the Word</h3>
                         <p>As a student-led team, awareness is everything. Share our mission with local high schools, tennis clubs, and your community.</p>
                     </div>
@@ -493,7 +559,7 @@
                             <span class="faq-chevron" aria-hidden="true">&#8964;</span>
                         </button>
                         <div class="faq-answer">
-                            <p>The Match Point Project is a student-led community initiative started by students at Leigh High School. We collect donated tennis gear to make the sport accessible to every child, regardless of their financial situation.</p>
+                            <p>The Match Point Project is a student-led community initiative started by students at Leigh High School. We collect donated tennis gear and funds to make the sport accessible to every child, regardless of their financial situation.</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -543,7 +609,7 @@
             <div class="container">
                 <div class="mission-box">
                     <div class="label">Our Mission Statement</div>
-                    <p>The Match Point Project is a student-led initiative from Leigh High School dedicated to making tennis accessible to every kid. Our mission is to give back to our community by collecting spare tennis gear.</p>
+                    <p>The Match Point Project is a student-led initiative from Leigh High School dedicated to making tennis accessible to every kid. Our mission is to give back to our community by collecting spare tennis gear and money.</p>
                     <p>As passionate tennis players ourselves, we know firsthand the joy this sport brings &mdash; and we believe every kid deserves that same chance to play.</p>
                     <p>We strive to ensure the next generation will continue to be able to participate in tennis at the highest level. We aim to ensure no child is left on the sidelines due to the cost of equipment.</p>
                     <p>By the end of the summer, we are planning to distribute these donations to organizations such as the Boys &amp; Girls Club to help support youth tennis programs and get more people involved in the sport.</p>
@@ -589,7 +655,7 @@
         <section class="contact-page-hero">
             <div class="container">
                 <h1>Contact Us</h1>
-                <p>Whether you want to donate gear, volunteer, or just say hello &mdash; we'd love to hear from you.</p>
+                <p>Whether you want to donate gear, support us financially, or just say hello &mdash; we'd love to hear from you.</p>
             </div>
         </section>
  
@@ -611,21 +677,71 @@
                     <div style="background:var(--white); border:1px solid var(--border); border-radius:10px; padding:1.75rem; text-align:center;">
                         <div style="font-size:1.5rem; margin-bottom:0.6rem;" aria-hidden="true">🎾</div>
                         <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--orange); margin-bottom:0.4rem;">We Accept</div>
-                        <span style="font-size:0.9rem; color:var(--navy); font-weight:500;">Racquets, balls, strings, and all gear</span>
+                        <span style="font-size:0.9rem; color:var(--navy); font-weight:500;">Racquets, balls, strings, all gear &amp; monetary donations</span>
                     </div>
                 </div>
  
-                <div class="native-form-wrap" style="text-align:center;">
-                    <div class="form-section-label">Get in Touch</div>
-                    <h2 class="form-section-title">Send Us an Email</h2>
-                    <p class="form-section-sub">We'll reply within a few days.</p>
-                    <a href="mailto:thematchpointproject.contact@gmail.com" class="btn">thematchpointproject.contact@gmail.com</a>
+                <!-- TALLY FORM - styled to look native -->
+                <div class="native-form-wrap">
+                    <div class="form-section-label">Send a Message</div>
+                    <h2 class="form-section-title">Get in Touch</h2>
+                    <p class="form-section-sub">Fill out the form below and we'll get back to you as soon as we can.</p>
+ 
+                    <iframe
+                        data-tally-src="https://tally.so/embed/eqzERl?transparentBackground=1&hideTitle=1&alignLeft=1"
+                        width="100%"
+                        height="500"
+                        frameborder="0"
+                        marginheight="0"
+                        marginwidth="0"
+                        title="Contact Form"
+                        style="display:block; min-height:480px;">
+                    </iframe>
+                    <script async src="https://tally.so/widgets/embed.js"></script>
+ 
+                    <p class="form-note">We'll reply to your email within a few days. You can also reach us directly at <a href="mailto:thematchpointproject.contact@gmail.com">thematchpointproject.contact@gmail.com</a></p>
                 </div>
  
             </div>
         </section>
  
     </div><!-- end contact -->
+ 
+    <!-- DONATE PAGE -->
+    <div id="page-donate" class="page">
+ 
+        <section class="donate-hero">
+            <div class="container">
+                <h1>Donate Money</h1>
+                <p>Your financial support goes directly toward giving kids the equipment and court time they need to play.</p>
+            </div>
+        </section>
+ 
+        <section class="donate-body">
+            <div class="container">
+ 
+                <div class="donate-card">
+                    <div class="donate-icon" aria-hidden="true">💛</div>
+                    <h2>Support Us on GoFundMe</h2>
+                    <p>Every dollar raised funds court time, coaching clinics, and brand new equipment for kids in need. No amount is too small &mdash; 100% goes directly to young players in our community.</p>
+                    <a href="https://www.gofundme.com/f/match-point-project-tennis-for-all" target="_blank" rel="noopener noreferrer" class="btn-gofundme">Donate on GoFundMe &rarr;</a>
+                </div>
+ 
+                <div class="donate-divider">or</div>
+ 
+                <div class="donate-gear-card">
+                    <div style="font-size:2rem; flex-shrink:0;" aria-hidden="true">🎾</div>
+                    <div class="dgc-text">
+                        <h3>Want to Donate Gear Instead?</h3>
+                        <p>We also accept racquets, balls, strings, and all tennis gear. Reach out to us on the Contact page and we'll arrange a drop-off &mdash; we're working with local Boys &amp; Girls Club sites to put donated gear directly into kids' hands.</p>
+                    </div>
+                    <a href="#" onclick="showPage('contact'); return false;" class="btn-sm" style="flex-shrink:0;">Go to Contact</a>
+                </div>
+ 
+            </div>
+        </section>
+ 
+    </div><!-- end donate -->
  
     <footer>
         <div class="container">
@@ -665,6 +781,7 @@
  
             const reasonLabels = {
                 gear: 'Gear Donation',
+                money: 'Financial Support',
                 partner: 'Partnership / Collaboration',
                 request: 'Equipment Request',
                 other: 'General Inquiry'
@@ -692,3 +809,5 @@
  
 </body>
 </html>
+
+

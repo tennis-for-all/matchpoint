@@ -263,7 +263,6 @@
         .g2 { grid-column: span 2; grid-row: span 1; }
         .g3 { grid-column: span 2; grid-row: span 1; }
         .g4 { grid-column: span 2; grid-row: span 1; }
-        .g5 { grid-column: span 2; grid-row: span 2; }
         .g6 { grid-column: span 2; grid-row: span 1; }
 
         /* ---------- FAQ ---------- */
@@ -334,11 +333,12 @@
             box-shadow: 0 10px 26px rgba(15,30,60,0.06);
         }
         .partner-spotlight .partner-mark {
-            width: 52px; height: 52px; border-radius: 10px; flex-shrink: 0;
-            background: var(--navy); color: var(--ball);
+            width: 68px; height: 52px; border-radius: 8px; flex-shrink: 0;
+            background: #fff; border: 1px solid var(--line);
             display: flex; align-items: center; justify-content: center;
+            padding: 0.4rem; overflow: hidden;
         }
-        .partner-spotlight .partner-mark svg { width: 26px; height: 26px; }
+        .partner-spotlight .partner-mark img { width: 100%; height: 100%; object-fit: contain; }
         .partner-spotlight .partner-role {
             font-family: 'Space Mono', monospace; font-size: 0.65rem; font-weight: 700;
             letter-spacing: 0.12em; text-transform: uppercase; color: var(--clay); margin-bottom: 0.25rem;
@@ -406,6 +406,13 @@
 
         .dropoff-card { text-align: left; display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap; }
         .dropoff-card .icon-wrap { margin: 0; }
+        .dropoff-logo {
+            width: 84px; height: 64px; border-radius: 8px; flex-shrink: 0;
+            background: #fff; border: 1px solid var(--line);
+            display: flex; align-items: center; justify-content: center;
+            padding: 0.5rem; overflow: hidden;
+        }
+        .dropoff-logo img { width: 100%; height: 100%; object-fit: contain; }
         .dropoff-details { flex: 1; min-width: 240px; }
         .dropoff-details h2 { text-align: left; margin-bottom: 0.5rem; }
         .dropoff-details p { text-align: left; margin-left: 0; margin-right: 0; }
@@ -439,7 +446,7 @@
             .court-lines { display: none; }
             .story-grid { grid-template-columns: 1fr; gap: 2.5rem; }
             .gallery-grid { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 110px; }
-            .g1, .g5 { grid-column: span 4; grid-row: span 1; aspect-ratio: 16/9; height: auto; }
+            .g1 { grid-column: span 4; grid-row: span 1; aspect-ratio: 16/9; height: auto; }
         }
 
         @media (max-width: 768px) {
@@ -554,11 +561,10 @@
                     <p>A look at the sport we're working to open up to more kids.</p>
                 </div>
                 <div class="gallery-grid">
-                    <a class="g1 reveal" href="#"><img src="https://images.unsplash.com/photo-1714657408180-5048727a2fdb?w=700&auto=format&fit=crop&q=80" alt="Young player on the tennis court"></a>
+                    <a class="g1 reveal" href="#"><img src="donation-gear.jpg" alt="Donated tennis gear collected by The Match Point Project"></a>
                     <a class="g2 reveal" href="#"><img src="https://images.unsplash.com/photo-1560012057-4372e14c5085?w=600&auto=format&fit=crop&q=80" alt="Yellow tennis racket"></a>
                     <a class="g3 reveal" href="#"><img src="https://images.unsplash.com/photo-1714508969012-7ac9c063b39a?w=600&auto=format&fit=crop&q=80" alt="Tennis balls on the court"></a>
-                    <a class="g4 reveal" href="#"><img src="https://images.unsplash.com/photo-1504030688812-2c4804e8d291?w=600&auto=format&fit=crop&q=80" alt="Young player holding a racket by the net"></a>
-                    <a class="g5 reveal" href="#"><img src="https://images.unsplash.com/photo-1543382513-3617a90d9a46?w=700&auto=format&fit=crop&q=80" alt="Child holding a tennis racket"></a>
+                    <a class="g4 reveal" href="#"><img src="https://images.unsplash.com/photo-1635873021329-c0af04695c9d?w=600&auto=format&fit=crop&q=80" alt="Tennis racket and ball on the court"></a>
                     <a class="g6 reveal" href="#"><img src="https://images.unsplash.com/photo-1519611103964-90f61a50d3e6?w=600&auto=format&fit=crop&q=80" alt="Tennis ball close up"></a>
                 </div>
             </div>
@@ -705,7 +711,7 @@
                     <p class="partners-intro">We're a young, student-run initiative &mdash; and we're grateful to the local businesses helping us reach more kids.</p>
                     <div class="partner-spotlight reveal">
                         <span class="partner-mark" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M6.5 4.5c3 3 3 12 0 15"/><path d="M17.5 4.5c-3 3-3 12 0 15"/></svg>
+                            <img src="tennis-anywhere-logo.png" alt="Tennis Anywhere logo">
                         </span>
                         <div>
                             <div class="partner-role">Drop-off Partner</div>
@@ -835,8 +841,8 @@
         <section class="donate-body">
             <div class="container">
                 <div class="donate-card dropoff-card reveal">
-                    <span class="icon-wrap" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.7-6-11a6 6 0 0 1 12 0c0 5.3-6 11-6 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+                    <span class="dropoff-logo" aria-hidden="true">
+                        <img src="tennis-anywhere-logo.png" alt="Tennis Anywhere logo">
                     </span>
                     <div class="dropoff-details">
                         <div class="partner-role">Drop-off Location</div>

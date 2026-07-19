@@ -213,6 +213,18 @@
         .brand-panel .panel-lines { position: absolute; inset: 0; width: 100%; height: 100%; }
         .brand-panel .brand-mark { position: relative; z-index: 1; width: 42%; height: auto; }
 
+        .brand-ball {
+            width: 150px; height: 150px; border-radius: 50%;
+            background: var(--ball);
+            position: relative; z-index: 1; flex-shrink: 0;
+        }
+        .brand-ball::before, .brand-ball::after {
+            content: ''; position: absolute; top: 0; bottom: 0; width: 58px;
+            border: 8px solid var(--navy); border-left: none; border-right: none;
+        }
+        .brand-ball::before { left: 17px; border-radius: 0 0 0 0 / 0 60% 60% 0; transform: scaleX(1.6); }
+        .brand-ball::after { right: 17px; transform: scaleX(1.6) scaleX(-1); }
+
         /* ---------- STORY ---------- */
         .story-section { padding: 6rem 0 5rem; }
 
@@ -528,11 +540,7 @@
                                 <line x1="15" y1="250" x2="285" y2="250" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
                                 <line x1="150" y1="15" x2="150" y2="485" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
                             </svg>
-                            <svg class="brand-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="50" cy="50" r="46" fill="var(--ball)"/>
-                                <path d="M28 6c15 15 15 73 0 88" stroke="var(--navy)" stroke-width="5.5" fill="none"/>
-                                <path d="M72 6c-15 15-15 73 0 88" stroke="var(--navy)" stroke-width="5.5" fill="none"/>
-                            </svg>
+                            <div class="brand-ball" aria-hidden="true"></div>
                         </div>
                     </div>
                 </div>
@@ -553,14 +561,13 @@
                 </div>
                 <div class="story-image reveal">
                     <div class="brand-panel on-light" style="border: 1px solid var(--line);">
-                        <svg class="brand-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width:38%;">
-                            <circle cx="50" cy="50" r="46" fill="var(--chalk)" stroke="var(--line)" stroke-width="1"/>
-                            <circle cx="50" cy="42" r="24" fill="none" stroke="var(--clay)" stroke-width="4"/>
-                            <line x1="50" y1="66" x2="50" y2="92" stroke="var(--clay)" stroke-width="4" stroke-linecap="round"/>
-                            <line x1="40" y1="80" x2="60" y2="80" stroke="var(--clay)" stroke-width="4" stroke-linecap="round"/>
-                            <line x1="50" y1="18" x2="50" y2="66" stroke="var(--navy)" stroke-width="2" opacity="0.35"/>
-                            <line x1="26" y1="42" x2="74" y2="42" stroke="var(--navy)" stroke-width="2" opacity="0.35"/>
+                        <svg class="panel-lines" viewBox="0 0 300 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                            <rect x="15" y="15" width="270" height="470" fill="none" stroke="var(--line)" stroke-width="1.5"/>
+                            <rect x="45" y="15" width="210" height="470" fill="none" stroke="var(--line)" stroke-width="1.5"/>
+                            <line x1="15" y1="250" x2="285" y2="250" stroke="var(--line)" stroke-width="1.5"/>
+                            <line x1="150" y1="15" x2="150" y2="485" stroke="var(--line)" stroke-width="1.5"/>
                         </svg>
+                        <div class="brand-ball" aria-hidden="true"></div>
                     </div>
                 </div>
             </div>

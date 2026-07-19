@@ -203,6 +203,16 @@
         }
         .hero-image img { width: 100%; height: 100%; object-fit: cover; }
 
+        .brand-panel {
+            width: 100%; height: 100%;
+            background: linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 100%);
+            display: flex; align-items: center; justify-content: center;
+            position: relative; overflow: hidden;
+        }
+        .brand-panel.on-light { background: var(--paper); }
+        .brand-panel .panel-lines { position: absolute; inset: 0; width: 100%; height: 100%; }
+        .brand-panel .brand-mark { position: relative; z-index: 1; width: 42%; height: auto; }
+
         /* ---------- STORY ---------- */
         .story-section { padding: 6rem 0 5rem; }
 
@@ -405,7 +415,15 @@
         .gear-instead p { font-size: 0.9rem; color: var(--slate); line-height: 1.7; }
         .gear-instead-text { flex: 1; }
 
-        .dropoff-card { text-align: left; display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap; }
+        .dropoff-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr);
+            gap: 1.75rem; max-width: 980px; margin: 0 auto 2rem;
+        }
+        .dropoff-grid .donate-card { max-width: none; margin: 0; }
+        @media (max-width: 900px) {
+            .dropoff-grid { grid-template-columns: 1fr; }
+        }
+        .dropoff-card { text-align: left; display: flex; flex-direction: column; gap: 1.25rem; align-items: flex-start; height: 100%; }
         .dropoff-card .icon-wrap { margin: 0; }
         .dropoff-logo {
             width: 84px; height: 64px; border-radius: 8px; flex-shrink: 0;
@@ -503,7 +521,19 @@
                 </div>
                 <div class="hero-visual reveal">
                     <div class="hero-image">
-                        <img src="https://images.unsplash.com/photo-1638364729288-442e77e8c4a4?w=900&auto=format&fit=crop&q=80" alt="Young tennis player on the court">
+                        <div class="brand-panel">
+                            <svg class="panel-lines" viewBox="0 0 300 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                                <rect x="15" y="15" width="270" height="470" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+                                <rect x="45" y="15" width="210" height="470" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+                                <line x1="15" y1="250" x2="285" y2="250" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+                                <line x1="150" y1="15" x2="150" y2="485" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+                            </svg>
+                            <svg class="brand-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="46" fill="var(--ball)"/>
+                                <path d="M28 6c15 15 15 73 0 88" stroke="var(--navy)" stroke-width="5.5" fill="none"/>
+                                <path d="M72 6c-15 15-15 73 0 88" stroke="var(--navy)" stroke-width="5.5" fill="none"/>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -522,7 +552,16 @@
                     <a href="#" class="text-link" onclick="showPage('about'); return false;">Read Our Full Mission &rarr;</a>
                 </div>
                 <div class="story-image reveal">
-                    <img src="https://images.unsplash.com/photo-1643236943728-2745b38cbcf7?w=800&auto=format&fit=crop&q=80" alt="Young player hitting a tennis ball">
+                    <div class="brand-panel on-light" style="border: 1px solid var(--line);">
+                        <svg class="brand-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width:38%;">
+                            <circle cx="50" cy="50" r="46" fill="var(--chalk)" stroke="var(--line)" stroke-width="1"/>
+                            <circle cx="50" cy="42" r="24" fill="none" stroke="var(--clay)" stroke-width="4"/>
+                            <line x1="50" y1="66" x2="50" y2="92" stroke="var(--clay)" stroke-width="4" stroke-linecap="round"/>
+                            <line x1="40" y1="80" x2="60" y2="80" stroke="var(--clay)" stroke-width="4" stroke-linecap="round"/>
+                            <line x1="50" y1="18" x2="50" y2="66" stroke="var(--navy)" stroke-width="2" opacity="0.35"/>
+                            <line x1="26" y1="42" x2="74" y2="42" stroke="var(--navy)" stroke-width="2" opacity="0.35"/>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </section>
@@ -729,6 +768,7 @@
                             <div class="partner-role">Drop-off Partner</div>
                             <h3>Almaden Swim &amp; Racquet Club</h3>
                             <p>6604 Northridge Dr, San Jose, CA 95120 &mdash; bring donations to the office by the pool.</p>
+                            <a class="partner-link" href="https://asrc.org/" target="_blank" rel="noopener noreferrer">Visit ASRC &rarr;</a>
                         </div>
                     </div>
                     <p class="partners-note">Interested in partnering with us or hosting a drop-off spot? We'd love to hear from you at <a href="mailto:thematchpointproject.contact@gmail.com" style="color:var(--navy); font-weight:700;">thematchpointproject.contact@gmail.com</a>.</p>
@@ -851,41 +891,42 @@
         </section>
         <section class="donate-body">
             <div class="container">
-                <div class="donate-card dropoff-card reveal">
-                    <span class="dropoff-logo" aria-hidden="true">
-                        <img src="img/tennisanywehreimage.png" alt="Tennis Anywhere logo">
-                    </span>
-                    <div class="dropoff-details">
-                        <div class="partner-role">Drop-off Location</div>
-                        <h2>Tennis Anywhere</h2>
-                        <p>15466 Los Gatos Blvd, Ste 106<br>Los Gatos, CA 95032</p>
-                        <p>Tennis Anywhere is one of our partners and hosts our collection bin right in the store. Drop off used racquets, dead or used balls, strings, or any other gear anytime during business hours &mdash; no need to call ahead.</p>
-                        <div class="hours-grid">
-                            <div class="hours-row"><span>Monday</span><span>Closed</span></div>
-                            <div class="hours-row"><span>Tuesday &ndash; Friday</span><span>11 AM &ndash; 7 PM</span></div>
-                            <div class="hours-row"><span>Saturday</span><span>9 AM &ndash; 6 PM</span></div>
-                            <div class="hours-row"><span>Sunday</span><span>1 PM &ndash; 5 PM</span></div>
-                        </div>
-                        <div class="dropoff-actions">
-                            <a href="https://www.google.com/maps/search/?api=1&query=Tennis+Anywhere+15466+Los+Gatos+Blvd+Ste+106+Los+Gatos+CA+95032" target="_blank" rel="noopener noreferrer" class="btn btn-dark btn-sm">Get Directions</a>
-                            <a href="https://www.tennisanywherelg.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm">Visit Tennis Anywhere</a>
+                <div class="dropoff-grid">
+                    <div class="donate-card dropoff-card reveal">
+                        <span class="dropoff-logo" aria-hidden="true">
+                            <img src="img/tennisanywehreimage.png" alt="Tennis Anywhere logo">
+                        </span>
+                        <div class="dropoff-details">
+                            <div class="partner-role">Drop-off Location</div>
+                            <h2>Tennis Anywhere</h2>
+                            <p>15466 Los Gatos Blvd, Ste 106<br>Los Gatos, CA 95032</p>
+                            <p>Tennis Anywhere is one of our partners and hosts our collection bin right in the store. Drop off used racquets, dead or used balls, strings, or any other gear anytime during business hours &mdash; no need to call ahead.</p>
+                            <div class="hours-grid">
+                                <div class="hours-row"><span>Monday</span><span>Closed</span></div>
+                                <div class="hours-row"><span>Tuesday &ndash; Friday</span><span>11 AM &ndash; 7 PM</span></div>
+                                <div class="hours-row"><span>Saturday</span><span>9 AM &ndash; 6 PM</span></div>
+                                <div class="hours-row"><span>Sunday</span><span>1 PM &ndash; 5 PM</span></div>
+                            </div>
+                            <div class="dropoff-actions">
+                                <a href="https://www.google.com/maps/search/?api=1&query=Tennis+Anywhere+15466+Los+Gatos+Blvd+Ste+106+Los+Gatos+CA+95032" target="_blank" rel="noopener noreferrer" class="btn btn-dark btn-sm">Get Directions</a>
+                                <a href="https://www.tennisanywherelg.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm">Visit Tennis Anywhere</a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="or-divider"><span>another drop-off spot</span></div>
-
-                <div class="donate-card dropoff-card reveal">
-                    <span class="dropoff-logo" aria-hidden="true">
-                        <img src="img/almadenlogo.jpg" alt="Almaden Swim & Racquet Club logo">
-                    </span>
-                    <div class="dropoff-details">
-                        <div class="partner-role">Drop-off Location</div>
-                        <h2>Almaden Swim &amp; Racquet Club</h2>
-                        <p>6604 Northridge Dr<br>San Jose, CA 95120</p>
-                        <p>Almaden Swim &amp; Racquet Club is one of our partners and accepts donations at the office by the pool. Just bring your racquets, dead or used balls, strings, or other gear to the office &mdash; no need to call ahead.</p>
-                        <div class="dropoff-actions">
-                            <a href="https://www.google.com/maps/search/?api=1&query=Almaden+Swim+%26+Racquet+Club+6604+Northridge+Dr+San+Jose+CA+95120" target="_blank" rel="noopener noreferrer" class="btn btn-dark btn-sm">Get Directions</a>
+                    <div class="donate-card dropoff-card reveal">
+                        <span class="dropoff-logo" aria-hidden="true">
+                            <img src="img/almadenlogo.jpg" alt="Almaden Swim & Racquet Club logo">
+                        </span>
+                        <div class="dropoff-details">
+                            <div class="partner-role">Drop-off Location</div>
+                            <h2>Almaden Swim &amp; Racquet Club</h2>
+                            <p>6604 Northridge Dr<br>San Jose, CA 95120</p>
+                            <p>Almaden Swim &amp; Racquet Club is one of our partners and accepts donations at the office by the pool. Just bring your racquets, dead or used balls, strings, or other gear to the office &mdash; no need to call ahead.</p>
+                            <div class="dropoff-actions">
+                                <a href="https://www.google.com/maps/search/?api=1&query=Almaden+Swim+%26+Racquet+Club+6604+Northridge+Dr+San+Jose+CA+95120" target="_blank" rel="noopener noreferrer" class="btn btn-dark btn-sm">Get Directions</a>
+                                <a href="https://asrc.org/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm">Visit ASRC</a>
+                            </div>
                         </div>
                     </div>
                 </div>

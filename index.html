@@ -86,16 +86,10 @@
         }
 
         .logo-mark {
-            width: 26px; height: 26px; border-radius: 50%;
-            background: var(--ball);
-            position: relative; flex-shrink: 0;
+            width: 26px; height: 26px; flex-shrink: 0;
+            display: inline-flex;
         }
-        .logo-mark::before, .logo-mark::after {
-            content: ''; position: absolute; top: 0; bottom: 0; width: 10px;
-            border: 1.4px solid var(--navy); border-left: none; border-right: none;
-        }
-        .logo-mark::before { left: 3px; border-radius: 0 0 0 0 / 0 60% 60% 0; transform: scaleX(1.6); }
-        .logo-mark::after { right: 3px; transform: scaleX(1.6) scaleX(-1); }
+        .logo-mark svg { width: 100%; height: 100%; display: block; }
 
         .logo span { color: var(--clay); }
 
@@ -214,16 +208,10 @@
         .brand-panel .brand-mark { position: relative; z-index: 1; width: 42%; height: auto; }
 
         .brand-ball {
-            width: 150px; height: 150px; border-radius: 50%;
-            background: var(--ball);
+            width: 150px; height: 150px;
             position: relative; z-index: 1; flex-shrink: 0;
         }
-        .brand-ball::before, .brand-ball::after {
-            content: ''; position: absolute; top: 0; bottom: 0; width: 58px;
-            border: 8px solid var(--navy); border-left: none; border-right: none;
-        }
-        .brand-ball::before { left: 17px; border-radius: 0 0 0 0 / 0 60% 60% 0; transform: scaleX(1.6); }
-        .brand-ball::after { right: 17px; transform: scaleX(1.6) scaleX(-1); }
+        .brand-ball svg { width: 100%; height: 100%; display: block; }
 
         /* ---------- STORY ---------- */
         .story-section { padding: 6rem 0 5rem; }
@@ -496,7 +484,7 @@
 
     <header>
         <div class="container nav-container">
-            <div class="logo"><span class="logo-mark" aria-hidden="true"></span>The Match Point <span>Project</span></div>
+            <div class="logo"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" fill="var(--ball)"/><path d="M6 3c3 3 3 15 0 18" stroke="var(--navy)" stroke-width="1.6" fill="none"/><path d="M18 3c-3 3-3 15 0 18" stroke="var(--navy)" stroke-width="1.6" fill="none"/></svg></span>The Match Point <span>Project</span></div>
             <nav class="primary-nav">
                 <ul class="nav-links">
                     <li><a href="#" data-page="home" onclick="showPage('home'); return false;">Home</a></li>
@@ -540,7 +528,7 @@
                                 <line x1="15" y1="250" x2="285" y2="250" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
                                 <line x1="150" y1="15" x2="150" y2="485" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
                             </svg>
-                            <div class="brand-ball" aria-hidden="true"></div>
+                            <div class="brand-ball" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" fill="var(--ball)"/><path d="M6 3c3 3 3 15 0 18" stroke="var(--navy)" stroke-width="1.6" fill="none"/><path d="M18 3c-3 3-3 15 0 18" stroke="var(--navy)" stroke-width="1.6" fill="none"/></svg></div>
                         </div>
                     </div>
                 </div>
@@ -567,7 +555,7 @@
                             <line x1="15" y1="250" x2="285" y2="250" stroke="var(--line)" stroke-width="1.5"/>
                             <line x1="150" y1="15" x2="150" y2="485" stroke="var(--line)" stroke-width="1.5"/>
                         </svg>
-                        <div class="brand-ball" aria-hidden="true"></div>
+                        <div class="brand-ball" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" fill="var(--ball)"/><path d="M6 3c3 3 3 15 0 18" stroke="var(--navy)" stroke-width="1.6" fill="none"/><path d="M18 3c-3 3-3 15 0 18" stroke="var(--navy)" stroke-width="1.6" fill="none"/></svg></div>
                     </div>
                 </div>
             </div>
@@ -963,7 +951,7 @@
 
     <footer>
         <div class="container footer-inner">
-            <div class="footer-logo"><span class="logo-mark" aria-hidden="true"></span>The Match Point Project</div>
+            <div class="footer-logo"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" fill="var(--ball)"/><path d="M6 3c3 3 3 15 0 18" stroke="var(--navy)" stroke-width="1.6" fill="none"/><path d="M18 3c-3 3-3 15 0 18" stroke="var(--navy)" stroke-width="1.6" fill="none"/></svg></span>The Match Point Project</div>
             <p>A Student-Led Community Initiative &mdash; Started by Students at Leigh High School</p>
             <p><a href="mailto:thematchpointproject.contact@gmail.com">thematchpointproject.contact@gmail.com</a></p>
             <p class="footer-copyright">The Match Point Project is an independent, student-run initiative and is not officially affiliated with or sponsored by Leigh High School.</p>

@@ -448,6 +448,11 @@
         .empty-state p { color: var(--slate); font-size: 1rem; line-height: 1.85; max-width: 460px; margin: 0 auto 2rem; }
 
         /* ---------- IMPACT PAGE ---------- */
+        .drive-block { margin-top: 4.5rem; padding-top: 3.5rem; border-top: 1px solid var(--line); }
+        .drive-block:first-of-type { margin-top: 3.5rem; }
+        .drive-header { text-align: center; margin-bottom: 3rem; }
+        .drive-subtitle { text-align: center; font-size: 1.35rem; color: var(--navy); margin-bottom: 2rem; font-family: 'Oswald', sans-serif; }
+
         .impact-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
         .stat-box {
             background: var(--paper); border: 1px solid var(--line); border-radius: 12px;
@@ -896,9 +901,9 @@
     <div id="page-impact" class="page">
         <section class="page-hero">
             <div class="container">
-                <span class="eyebrow on-dark">Our Impact</span>
-                <h1>The Summer Donation Drive</h1>
-                <p>Game, set, match &mdash; a look back at what our community put together this summer.</p>
+                <span class="eyebrow on-dark">Impact</span>
+                <h1>Our Impact</h1>
+                <p>Game, set, match &mdash; a look back at what our community has put together, drive by drive.</p>
             </div>
         </section>
 
@@ -907,10 +912,16 @@
                 <div class="mission-box reveal">
                     <span class="eyebrow">Who We Are</span>
                     <p>The Match Point Project is a student-led initiative founded by three Leigh High School students with a goal to create more opportunities for the youth in our community by providing them with tennis equipment.</p>
-                    <p>We believe that having the proper equipment can make it easier for someone to discover tennis, develop their skills, and pursue something they enjoy. This summer, we launched our first donation drive, working with local tennis organizations, coaches, and youth programs to collect equipment for donation.</p>
+                    <p>We believe that having the proper equipment can make it easier for someone to discover tennis, develop their skills, and pursue something they enjoy. Every donation drive we run, we work with local tennis organizations, coaches, and youth programs to collect and redistribute equipment.</p>
                 </div>
 
-                <h2 class="values-title">By the Numbers</h2>
+                <div class="drive-block reveal">
+                <div class="drive-header">
+                    <span class="eyebrow">Summer 2026 Drive</span>
+                    <h2 class="values-title" style="margin-bottom:0.25rem;">June &ndash; August 2026</h2>
+                </div>
+
+                <h3 class="drive-subtitle">By the Numbers</h3>
                 <div class="impact-stats">
                     <div class="stat-box reveal">
                         <div class="stat-num">57</div>
@@ -930,7 +941,7 @@
                     </div>
                 </div>
 
-                <h2 class="values-title" style="margin-top:4.5rem;">Game, Set, Match</h2>
+                <h3 class="drive-subtitle" style="margin-top:4rem;">Game, Set, Match</h3>
 
                 <div class="timeline">
                     <div class="timeline-item reveal">
@@ -967,7 +978,7 @@
                     </div>
                 </div>
 
-                <h2 class="values-title" style="margin-top:4.5rem;">Thank You</h2>
+                <h3 class="drive-subtitle" style="margin-top:4rem;">Thank You</h3>
                 <div class="values-list">
                     <div class="value-row reveal">
                         <img class="thanks-photo" src="img/impact-asrc-pool.jpg" alt="Collecting donations at Almaden Swim and Racquet Club">
@@ -1006,9 +1017,13 @@
                 </div>
 
                 <div class="mission-box reveal" style="margin-top:4rem; border-left-color: var(--clay);">
-                    <p>Our work isn't over yet. This summer's donation drive brings us closer to our goal of creating more opportunities for young people &mdash; we've focused on tennis, but we hope our impact spreads far beyond the court. We're grateful to everyone who helped us reach this point, and while we're signing off for now to focus on school, we hope to be back soon.</p>
+                    <p>Our work isn't over yet. This drive brings us closer to our goal of creating more opportunities for young people &mdash; we've focused on tennis, but we hope our impact spreads far beyond the court. We're grateful to everyone who helped us reach this point, and while we're signing off for now to focus on school, we hope to be back soon.</p>
                     <p class="tagline">Racquets up!</p>
                 </div>
+                </div><!-- end drive-block: Summer 2026 -->
+
+                <!-- Future drives: copy the .drive-block above, update the eyebrow/date, stats, timeline, and thank-you list -->
+
             </div>
         </section>
     </div><!-- end impact -->
